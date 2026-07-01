@@ -1,0 +1,588 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PROXIMA ROOT - Official Website</title>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: radial-gradient(circle at top, #1a0b36 0%, #070312 100%);
+
+            color: #ffffff;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            min-height: 100vh;
+
+            padding: 20px 15px;
+
+        }
+
+
+
+        /* Card Container */
+
+        .bio-card {
+
+            width: 100%;
+
+            max-width: 420px;
+
+            background: #110c1f;
+
+            border: 2px solid #20173d;
+
+            border-radius: 32px;
+
+            padding: 40px 24px;
+
+            text-align: center;
+
+            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.7);
+
+            position: relative;
+
+        }
+
+
+
+        /* Top Share Button */
+
+        .share-btn {
+
+            position: absolute;
+
+            top: 25px;
+
+            right: 25px;
+
+            width: 40px;
+
+            height: 40px;
+
+            background: #8a2be2;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+
+        }
+
+
+
+        /* FIXED LOGO WITH TEXT (No Image Needed, No Break Chance) */
+
+        .profile-wrapper {
+
+            width: 130px;
+
+            height: 130px;
+
+            margin: 0 auto 20px auto;
+
+            border-radius: 50%;
+
+            background: linear-gradient(45deg, #8a2be2, #4b0082);
+
+            padding: 3px; 
+
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.8);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+
+        .profile-text-circle {
+
+            width: 100%;
+
+            height: 100%;
+
+            border-radius: 50%;
+
+            background-color: #1a0f30; /* Deep purple background inside circle */
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-weight: 700;
+
+            font-size: 15px;
+
+            color: #ffffff;
+
+            letter-spacing: 0.5px;
+
+            text-transform: uppercase;
+
+            line-height: 1.2;
+
+            padding: 10px;
+
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.8);
+
+        }
+
+
+
+        .profile-title {
+
+            font-size: 28px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            margin-top: 15px;
+
+            margin-bottom: 8px;
+
+            color: #ffffff;
+
+        }
+
+
+
+        .profile-subtitle {
+
+            font-size: 14px;
+
+            color: #a29db8;
+
+            margin-bottom: 30px;
+
+            font-weight: 400;
+
+        }
+
+
+
+        /* Social Navigation Grid */
+
+        .social-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 16px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+
+        .social-box {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            color: white;
+
+            font-size: 22px;
+
+            text-decoration: none;
+
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        }
+
+
+
+        .social-box:hover {
+
+            transform: scale(1.1);
+
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+
+        }
+
+
+
+        .ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+        .yt { background: #ff0000; }
+
+        .tt { background: #000000; border: 1px solid #25f4ee; }
+
+        .tg { background: #229ED9; }
+
+
+
+        /* Website Link/Download Boxes */
+
+        .link-item {
+
+            background: #181326;
+
+            border: 1px solid #261f3b;
+
+            border-radius: 18px;
+
+            padding: 18px 22px;
+
+            margin-bottom: 16px;
+
+            display: flex;
+
+            align-items: center;
+
+            text-decoration: none;
+
+            color: white;
+
+            text-align: left;
+
+            transition: all 0.2s ease-in-out;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+        }
+
+
+
+        .link-item:hover {
+
+            background: #201933;
+
+            border-color: #8a2be2;
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.2);
+
+        }
+
+
+
+        .link-text {
+
+            flex-grow: 1;
+
+        }
+
+
+
+        .link-title {
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            color: #ffffff;
+
+            margin-bottom: 4px;
+
+        }
+
+
+
+        .link-desc {
+
+            font-size: 11px;
+
+            color: #797393;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+        }
+
+        
+
+        /* Website Icons */
+
+        .box-icon {
+
+            font-size: 28px;
+
+            margin-right: 18px;
+
+            width: 45px;
+
+            text-align: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+
+        .discord-color { color: #5865F2; }
+
+        .playstore-color { color: #3bccff; }
+
+        .gear-color { color: #a29db8; }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="bio-card">
+
+        <!-- Share button -->
+
+        <div class="share-btn"><i class="fa-solid fa-share-nodes"></i></div>
+
+
+
+        <!-- TEXT LOGO: No Image, dynamic and 100% safe -->
+
+        <div class="profile-wrapper">
+
+            <div class="profile-text-circle">
+
+                PROXIMA<br>ROOT
+
+            </div>
+
+        </div>
+
+        
+
+        <!-- Brand Title -->
+
+        <h1 class="profile-title">PROXIMA ROOT</h1>
+
+        <p class="profile-subtitle">Promovendo os melhores aplicativos</p>
+
+
+
+        <!-- Social Media Links -->
+
+        <div class="social-container">
+
+            <a id="link-instagram" href="#" target="_blank" class="social-box ig"><i class="fa-brands fa-instagram"></i></a>
+
+            <a id="link-youtube" href="#" target="_blank" class="social-box yt"><i class="fa-brands fa-youtube"></i></a>
+
+            <a id="link-tiktok" href="#" target="_blank" class="social-box tt"><i class="fa-brands fa-tiktok"></i></a>
+
+            <a id="link-telegram" href="#" target="_blank" class="social-box tg"><i class="fa-brands fa-telegram"></i></a>
+
+        </div>
+
+
+
+        <!-- Download & Discord Boxes -->
+
+        
+
+        <!-- Box 1: Get Key -->
+
+        <a id="link-box-key" href="#" target="_blank" class="link-item">
+
+            <div class="link-text">
+
+                <div class="link-title">GET KEY FREE</div>
+
+                <div class="link-desc">OBTENHA CHAVE GRÁTIS</div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- Box 2: Proxy Gringo -->
+
+        <a id="link-box-proxy" href="#" target="_blank" class="link-item">
+
+            <div class="box-icon gear-color"><i class="fa-solid fa-gear"></i></div>
+
+            <div class="link-text">
+
+                <div class="link-title">Proxy proxima root panel</div>
+
+                <div class="link-desc">DOWNLOAD &gt; PAINEL PROXY ADB</div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- Box 3: Free Fire PlayStore -->
+
+        <a id="link-box-playstore" href="#" target="_blank" class="link-item">
+
+            <div class="box-icon playstore-color"><i class="fa-brands fa-google-play"></i></div>
+
+            <div class="link-text">
+
+                <div class="link-title">Free Fire PlayStore</div>
+
+                <div class="link-desc">DOWNLOAD &gt; FREE FIRE</div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- Box 4: Discord Official Store -->
+
+        <a id="link-box-discord" href="#" target="_blank" class="link-item">
+
+            <div class="box-icon discord-color"><i class="fa-brands fa-discord"></i></div>
+
+            <div class="link-text">
+
+                <div class="link-title">LOJA OFICIAL</div>
+
+                <div class="link-desc">DISCORD OFICIAL</div>
+
+            </div>
+
+        </a>
+
+
+
+    </div>
+
+
+
+    <!-- 🛠️ URL SYSTEM CONFIGURATION PANEL -->
+
+    <script>
+
+        // Bhai, bas niche diye gaye quotes (" ") ke andar apne links daal do!
+
+        
+
+        const configLinks = {
+
+            // 1. Social Media Links
+
+            instagram: "https://www.instagram.com/ariful_official24?igsh=MTducWdxOXp4ZXV1MA==",
+
+            youtube:   "https://www.instagram.com/ariful_official24?igsh=MTducWdxOXp4ZXV1MA==",
+
+            tiktok:    "https://www.facebook.com/share/18ksJ3cpRU/",
+
+            telegram:  "https://t.me/proximaoxy",
+
+            
+
+            // 2. Download Boxes Links & Discord
+
+            getKeyBox:      "https://proximaofficialsite.github.io/proximaKe/",
+
+            proxy proxima rootBox: "https://proximaofficialsite.github.io/Proximasite/",
+
+            freeFireBox:    "https://play.google.com/store/apps/details?id=com.dts.freefiremax",
+
+            discordBox:     "https://discord.gg/4WKPYwSb"
+
+        };
+
+
+
+        // System assignment logic
+
+        document.getElementById('link-instagram').href = configLinks.instagram;
+
+        document.getElementById('link-youtube').href = configLinks.youtube;
+
+        document.getElementById('link-tiktok').href = configLinks.tiktok;
+
+        document.getElementById('link-telegram').href = configLinks.telegram;
+
+        
+
+        document.getElementById('link-box-key').href = configLinks.getKeyBox;
+
+        document.getElementById('link-box-proxy').href = configLinks.proxyGringoBox;
+
+        document.getElementById('link-box-playstore').href = configLinks.freeFireBox;
+
+        document.getElementById('link-box-discord').href = configLinks.discordBox;
+
+    </script>
+
+
+
+</body>
+
+</html>
